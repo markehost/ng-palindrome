@@ -1,43 +1,100 @@
 
 /*START palindrome STYLE*/
-/*:host {*/
-    /*text-align: center;*/
-/*}*/
 
 .palindrome {
     background-color: transparent;
     color: white;
     display: flex;
     align-items: center;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     height: 100%;
     width: 100%;
 }
 
+.palindrome__title {
+    color: #111;
+    flex: 0 0 auto;
+    font-size: 4rem;
+}
+
 .palindrome__card {
-    background-color: #5B5F68;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.1);
     display: flex;
+    flex: 0 0 auto;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-    padding: 2rem 1rem;
+    padding: 0;
     height: 60%;
     width: 60%;
 }
 
-.palindrome__title {
-    font-size: 20px;
+.palindrome__result {
+    background-color: #2785FF;
+    font-size: 5rem;
+    align-items: center;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    width: 100%;
 }
 
 .palindrome__inputs {
+    background-color: #FFF;
     display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
 }
 
+.palindrome__min,
+.palindrome__max {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
 .palindrome__min {
 
 }
 
 .palindrome__max {
 
+}
+
+/* #E17760 */
+
+.palindrome__text-input,
+.palindrome__text-input:focus,
+.palindrome__text-input:hover {
+    border: none;
+    border-bottom: 3px solid transparent;
+    /*border: 2px solid #8FA3C8;*/
+    background-color: #FFF;
+    transition: all ease-in-out 0.2s;
+}
+
+.palindrome__label {
+    color: #808283;
+    flex: 0 0 auto;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.palindrome__text-input {
+    border-radius: 2px;
+    flex: 1 0 auto;
+    font-size: 3rem;
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+}
+.palindrome__text-input:hover {
+
+}
+.palindrome__text-input:focus {
+    /*background-color: #F6F6F6;*/
+    /*box-shadow: inset 0 0 5px 0 #E17760 ;*/
+    border-bottom: 3px solid #e17760;
+    outline: 0;
 }
