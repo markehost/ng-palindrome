@@ -1,0 +1,43 @@
+
+/*START palindrome STYLE*/
+/*:host {*/
+    /*text-align: center;*/
+/*}*/
+
+.palindrome {
+    background-color: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.palindrome__card {
+    background-color: #5B5F68;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+    height: 60%;
+    width: 60%;
+}
+
+.palindrome__title {
+    font-size: 20px;
+}
+
+.palindrome__inputs {
+    display: flex;
+}
+
+.palindrome__min {
+
+}
+
+.palindrome__max {
+
+}

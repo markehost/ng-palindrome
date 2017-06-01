@@ -1,14 +1,20 @@
-<h1>
-  {{title}}
-</h1>
-<p>highest - {{ highest }}</p>
-<p>min - {{ palindrome.min }}</p>
-<p>max - {{ palindrome.max }}</p>
-<div>
-  <label>min: </label>
-  <input [(ngModel)]="palindrome.min" placeholder="min" name="min" type="text" (input)="onChangeInput($event)">
-</div>
-<div>
-  <label>max: </label>
-  <input [(ngModel)]="palindrome.max" placeholder="max" name="max" type="text" (input)="onChangeInput($event)">
+<div class="palindrome">
+  <div class="palindrome__card">
+    <h1 class="palindrome__title">
+      {{title}}
+    </h1>
+    <p>Result - {{ highest }}</p>
+    <!--<p>min - {{ palindrome.min }}</p>-->
+    <!--<p>max - {{ palindrome.max }}</p>-->
+    <div class="palindrome__inputs">
+      <div class="palindrome__min">
+        <label>Lower Boundary: </label>
+        <input [ngModel]="palindrome.min" placeholder="lower bound" name="min" type="text" (input)="onChangeInput($event)">
+      </div>
+      <div class="palindrome__max">
+        <label>Upper Boundary: </label>
+        <input [ngModel]="palindrome.max" placeholder="upper bound" name="max" type="text" (input)="onChangeInput($event)">
+      </div>
+    </div>
+  </div>
 </div>
