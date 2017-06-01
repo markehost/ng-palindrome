@@ -10,7 +10,7 @@ Simple Angular setup to check for the highest palindromic number between two use
 
 ```js
 $ npm install
-$ ng serve
+$ npm start
 ```
 
 Navigate to `http://localhost:4200/` in your browser.
