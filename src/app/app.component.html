@@ -15,11 +15,11 @@
     <div class="palindrome__inputs">
       <div class="palindrome__min">
         <label class="palindrome__label">Lower Boundary </label>
-        <input class="palindrome__text-input" [ngModel]="palindrome.min" placeholder="lower bound" name="min" type="text" (input)="onChangeInput($event)">
+        <input class="palindrome__text-input" [ngModel]="palindrome.min" placeholder="lower bound" name="min" type="number" (input)="onChangeInput($event)">
       </div>
       <div class="palindrome__max">
         <label class="palindrome__label">Upper Boundary </label>
-        <input class="palindrome__text-input" [ngModel]="palindrome.max" placeholder="upper bound" name="max" type="text" (input)="onChangeInput($event)">
+        <input class="palindrome__text-input" [ngModel]="palindrome.max" placeholder="upper bound" name="max" type="number" (input)="onChangeInput($event)">
       </div>
     </div>
 
