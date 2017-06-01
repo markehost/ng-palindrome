@@ -1,110 +1,39 @@
 
-/*START palindrome STYLE*/
-
-.palindrome {
+.app {
     background-color: transparent;
     color: white;
     display: flex;
     align-items: center;
     flex-direction: column;
+    /*justify-content: space-around;*/
     justify-content: space-around;
     height: 100%;
     width: 100%;
 }
-
-.palindrome__title {
+.app__title {
     color: #111;
-    font-family: Gill Sans, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
     flex: 0 0 auto;
     font-size: 4rem;
 }
-
-.palindrome__card {
-    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.1);
+.app__nav {
     display: flex;
-    flex: 0 0 auto;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 0;
-    height: 60%;
-    width: 60%;
-}
-
-.palindrome__result {
-    background-color: #2785FF;
-    font-size: 5rem;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 auto;
-    /*justify-content: center;*/
-    justify-content: space-around;
-    width: 100%;
-}
-
-.palindrome__highest {}
-
-.palindrome__error {
-    font-size: 1.3rem;
-    color: #FB212F;
-    text-shadow: 0 1px 0 rgba(0,0,0,0.1);
-    text-transform: capitalize;
-}
-
-.palindrome__inputs {
-    background-color: #FFF;
-    display: flex;
-    flex: 1 1 auto;
     flex-direction: row;
     justify-content: space-around;
-    width: 100%;
+    width: 50%;
 }
 
-.palindrome__min,
-.palindrome__max {
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 auto;
-}
-.palindrome__min {}
-.palindrome__max {}
-
-/* #E17760 */
-
-.palindrome__text-input,
-.palindrome__text-input:focus,
-.palindrome__text-input:hover {
-    border: none;
+.app__nav-anchor,
+.app__nav-anchor:active,
+.app__nav-anchor:hover,
+.app__nav-anchor:visited {
     border-bottom: 3px solid transparent;
-    /*border: 2px solid #8FA3C8;*/
-    background-color: #FFF;
-    transition: all ease-in-out 0.2s;
+    color: #F56262;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: all ease-in-out 0.2s
 }
-
-.palindrome__label {
-    color: #808283;
-    font-family: Lucida, sans-serif;
-    font-size: 1.3rem;
-    flex: 0 0 auto;
-    margin: 1rem 0;
-    text-align: center;
-}
-
-.palindrome__text-input {
-    border-radius: 2px;
-    /*font-family: Lucidatypewriter, Andale Mono, monospace;*/
-    flex: 1 0 auto;
-    font-size: 3rem;
-    padding: 0.75rem 0.5rem;
-    text-align: center;
-}
-.palindrome__text-input:hover {
-
-}
-.palindrome__text-input:focus {
-    /*background-color: #F6F6F6;*/
-    /*box-shadow: inset 0 0 5px 0 #E17760 ;*/
-    border-bottom: 3px solid #e17760;
-    outline: 0;
+.app__nav-anchor:hover {
+    color: #F94264;
+    border-bottom: 3px solid #FFF;
 }

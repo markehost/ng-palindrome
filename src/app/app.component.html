@@ -1,27 +1,14 @@
-<div class="palindrome">
+<div class="app">
 
-  <h1 class="palindrome__title">
+  <h1 class="app__title">
     {{title}}
   </h1>
 
-  <div class="palindrome__card">
-
-
-    <div class="palindrome__result">
-      <div class="palindrome__highest">{{ highest }}</div>
-      <div class="palindrome__error">{{ error }}</div>
-    </div>
-
-    <div class="palindrome__inputs">
-      <div class="palindrome__min">
-        <label class="palindrome__label">Lower Boundary </label>
-        <input class="palindrome__text-input" [ngModel]="palindrome.min" placeholder="lower bound" name="min" type="number" (input)="onChangeInput($event)">
-      </div>
-      <div class="palindrome__max">
-        <label class="palindrome__label">Upper Boundary </label>
-        <input class="palindrome__text-input" [ngModel]="palindrome.max" placeholder="upper bound" name="max" type="number" (input)="onChangeInput($event)">
-      </div>
-    </div>
-
+  <div class="app__nav">
+    <a class="app__nav-anchor" routerLink="/">What is this?</a>
+    <a class="app__nav-anchor" routerLink="/palindrome">Numeric Palindrome Finder</a>
   </div>
+
+  <router-outlet></router-outlet>
+
 </div>
