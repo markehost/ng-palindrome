@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 // import R from 'ramda';
 
 export class Palindrome {
@@ -9,26 +9,30 @@ export class Palindrome {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.Native,
 })
 
 export class AppComponent {
   constructor() {
-
     this.highest = this.highestAvailablePalindrome( this.palindrome )
-    
   }
 
   title = 'Highest Available Palindrome';
-
   highest = null;
-
   palindrome: Palindrome = {
     min: '0',
     max: '100',
   };
 
+  isNumeric( num: any ) {
+    // https://github.com/markehost/javascript-exercises/blob/solutions/isNumeric/index.js
+
+    return !isNaN( parseFloat(num) ) && isFinite(num)
+  };
+
   isPalindrome( data: number ) {
+    // function returns boolean value
     // used solution from my practice repo
     // https://github.com/markehost/javascript-exercises/tree/solutions/palindrome
 
@@ -42,21 +46,20 @@ export class AppComponent {
 
     // CHECK IF STRINGS IS SAME FORWARDS AND BACKWARDS
     return removeCharacter == reverseString;
-
   };
 
   highestAvailablePalindrome( range: { min: string, max: string } ) {
-    console.log(" highest available palindrome - range  ", range );
+    // function returns a number based on a range within an object
+    // console.log(" highest available palindrome - range  ", range );
 
-    // this.isPalindrome( this.palindrome );
     let min = parseInt( range.min, 10 );
     let max = parseInt( range.max, 10 );
-    // for ( let i = range.max; i > range.min; i-- ) {
-    for ( let i = max; i > min; i-- ) {
-      console.log("what is i ---->", i);
 
+    // loop through numeric values from highest first - lowest last
+    for ( let i = max ; i > min; i-- ) {
+      // console.log("what is i ---->", i);
       let check = this.isPalindrome( i );
-      console.log("check ", check );
+      // console.log("check ", check );
 
       // if palindrome found - break out of loop
       if ( check === true ) {
@@ -68,8 +71,23 @@ export class AppComponent {
   };
 
   onChangeInput( event: any ) {
-    console.log(" on change input ", event.target.value );
+    // console.log(" on change input - name ", event.target.name );
+    // console.log(" on change input - value ", event.target.value );
 
-    this.highest = this.highestAvailablePalindrome( this.palindrome );
+    let value = event.target.value;
+
+    if ( this.isNumeric(value) ) {
+      // set local values for input fields
+      this.palindrome[event.target.name] = event.target.value;
+
+      // set the highest available palindrome for given input values
+      this.highest = this.highestAvailablePalindrome( this.palindrome );
+    } else {
+
+      // not numeric -> store error message
+      console.log("not numeric value");
+    }
+
+    // this.highest = this.highestAvailablePalindrome( this.palindrome );
   };
 }
