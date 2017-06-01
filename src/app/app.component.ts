@@ -20,6 +20,8 @@ export class AppComponent {
 
   title = 'Highest Available Palindrome';
   highest = null;
+  // error = null;
+  error = '';
   palindrome: Palindrome = {
     min: '0',
     max: '100',
@@ -50,16 +52,13 @@ export class AppComponent {
 
   highestAvailablePalindrome( range: { min: string, max: string } ) {
     // function returns a number based on a range within an object
-    // console.log(" highest available palindrome - range  ", range );
 
     let min = parseInt( range.min, 10 );
     let max = parseInt( range.max, 10 );
 
     // loop through numeric values from highest first - lowest last
     for ( let i = max ; i > min; i-- ) {
-      // console.log("what is i ---->", i);
       let check = this.isPalindrome( i );
-      // console.log("check ", check );
 
       // if palindrome found - break out of loop
       if ( check === true ) {
@@ -71,9 +70,6 @@ export class AppComponent {
   };
 
   onChangeInput( event: any ) {
-    // console.log(" on change input - name ", event.target.name );
-    // console.log(" on change input - value ", event.target.value );
-
     let value = event.target.value;
 
     if ( this.isNumeric(value) ) {
@@ -82,10 +78,16 @@ export class AppComponent {
 
       // set the highest available palindrome for given input values
       this.highest = this.highestAvailablePalindrome( this.palindrome );
+      this.error = '';
     } else {
 
       // not numeric -> store error message
-      console.log("not numeric value");
+      this.error = 'not a numeric value';
+    }
+
+    // event.target.value
+    if ( this.palindrome.min >= this.palindrome.max ) {
+      this.error = 'lower boundary must be less than upper boundary';
     }
 
     // this.highest = this.highestAvailablePalindrome( this.palindrome );
