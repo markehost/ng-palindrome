@@ -1,0 +1,23 @@
+<div class="palindrome__card">
+
+
+  <div class="palindrome__result">
+    <div class="palindrome__highest">{{ highest }}</div>
+    <div class="palindrome__error">{{ error }}</div>
+  </div>
+
+  <div class="palindrome__inputs">
+    <div class="palindrome__min">
+      <label class="palindrome__label">Lower Boundary </label>
+      <input class="palindrome__text-input" [ngModel]="palindrome.min" placeholder="lower bound" name="min" type="number" (input)="onChangeInput($event)">
+    </div>
+    <div class="palindrome__max">
+      <label class="palindrome__label">Upper Boundary </label>
+      <input class="palindrome__text-input" [ngModel]="palindrome.max" placeholder="upper bound" name="max" type="number" (input)="onChangeInput($event)">
+    </div>
+  </div>
+  <div class="palindrome__search">
+    <button class="palindrome__search-button" (click)="onClickSearch($event)">Search</button>
+  </div>
+
+</div>

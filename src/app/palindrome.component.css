@@ -1,0 +1,149 @@
+
+/*START palindrome STYLE*/
+
+.palindrome {
+    background-color: transparent;
+    color: white;
+    display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+
+.palindrome__title {
+    color: #111;
+    font-family: Gill Sans, sans-serif;
+    flex: 0 0 auto;
+    font-size: 4rem;
+}
+
+.palindrome__card {
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.1);
+    display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    /*height: 60%;*/
+    /*width: 60%;*/
+}
+
+.palindrome__result {
+    background-color: #2785FF;
+    font-size: 5rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    /*justify-content: center;*/
+    justify-content: space-around;
+    width: 100%;
+}
+
+.palindrome__highest {}
+
+.palindrome__error {
+    font-size: 1.3rem;
+    color: #FB212F;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+    text-transform: capitalize;
+}
+
+.palindrome__search {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    width: 100%;
+}
+.palindrome__search-button,
+.palindrome__search-button:hover,
+.palindrome__search-button:active,
+.palindrome__search-button:focus {
+    border: none;
+    color: #FFF;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.3rem;
+    flex: 1 0 auto;
+    justify-content: center;
+    min-height: 3rem;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: all ease-in-out 0.1s;
+}
+
+.palindrome__search-button {
+    background-color: #58A190;
+}
+
+.palindrome__search-button:hover {
+    background-color: #0B774A;
+}
+
+.palindrome__search-button:active {
+    background-color: #0B774A;
+    position: relative;
+    top: 1px;
+}
+
+.palindrome__inputs {
+    background-color: #FFF;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.palindrome__min,
+.palindrome__max {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+.palindrome__min {}
+.palindrome__max {}
+
+
+.palindrome__text-input,
+.palindrome__text-input:focus,
+.palindrome__text-input:hover {
+    border: none;
+    border-bottom: 10px solid transparent;
+    /*border: 2px solid #8FA3C8;*/
+    background-color: #FFF;
+    transition: all ease-in-out 0.2s;
+}
+
+.palindrome__label {
+    color: #808283;
+    font-family: Lucida, sans-serif;
+    font-size: 1.3rem;
+    flex: 0 0 auto;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.palindrome__text-input {
+    border-radius: 2px;
+    /*font-family: Lucidatypewriter, Andale Mono, monospace;*/
+    flex: 1 0 auto;
+    font-size: 3rem;
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+}
+.palindrome__text-input:hover {
+
+}
+.palindrome__text-input:focus {
+    border-bottom: 10px solid #e17760;
+    outline: 0;
+}
