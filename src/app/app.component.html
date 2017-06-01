@@ -1,3 +1,14 @@
 <h1>
   {{title}}
 </h1>
+<p>highest - {{ highest }}</p>
+<p>min - {{ palindrome.min }}</p>
+<p>max - {{ palindrome.max }}</p>
+<div>
+  <label>min: </label>
+  <input [(ngModel)]="palindrome.min" placeholder="min" name="min" type="text" (input)="onChangeInput($event)">
+</div>
+<div>
+  <label>max: </label>
+  <input [(ngModel)]="palindrome.max" placeholder="max" name="max" type="text" (input)="onChangeInput($event)">
+</div>
