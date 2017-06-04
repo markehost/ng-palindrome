@@ -8,7 +8,17 @@ Simple Angular setup to check for the highest palindromic number between two use
 
 ## How to Run the App
 
-```js
+Make sure you have `angular-cli` installed
+
+```bash
+$ npm install -g @angular/cli
+```
+
+Then pull the repo, navigate to the directory and run the app.
+
+```bash
+$ git clone https://github.com/markehost/ng-palindrome.git
+$ cd ng-palindrome
 $ npm install
 $ ng serve
 ```
