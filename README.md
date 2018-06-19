@@ -20,7 +20,7 @@ Then pull the repo, navigate to the directory and run the app.
 $ git clone https://github.com/markehost/ng-palindrome.git
 $ cd ng-palindrome
 $ npm install
-$ ng serve
+$ npm start
 ```
 
 Navigate to `http://localhost:4200/` in your browser.
